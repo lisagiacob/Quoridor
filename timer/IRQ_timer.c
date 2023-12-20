@@ -27,7 +27,8 @@
 void TIMER0_IRQHandler (void)
 {
 	static int clear = 0;
-	char time_in_char[5] = "";
+	char time_in_char[5] = "20";
+	GUI_Text(0, 280, (uint8_t *) time_in_char, Blue, White);	
 	
   if(getDisplayPoint(&display, Read_Ads7846(), &matrix )){
 		if(display.y < 280){
