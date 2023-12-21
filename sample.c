@@ -48,7 +48,7 @@ int giocatore = 1;				// valori accettati: 1, 2
 
 int main(void)
 {
-	
+	char str[2];
 	
   SystemInit();  												/* System Initialization (i.e., PLL)  */
 	
@@ -84,8 +84,7 @@ int main(void)
 	while(!vittoria){
 		enable_RIT();
 		for(i; i > 0; i--){							// quando il giocatore seleziona la mossa, metto i = 0
-			GUI_Text(0, 280, (uint8_t *) strcat("Secondi mancanti:", (char*)i) , Blue, White);
-			char str[2];
+			GUI_Text(0, 280, (uint8_t *) "Secondi mancanti:" , Blue, White);
 			sprintf(str, "%d", i);
 			GUI_Text(200, 280, (uint8_t *) str , Blue, White);
 			init_timer(0, 0x17D7840);											/* 1s */
