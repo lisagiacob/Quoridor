@@ -16,3 +16,4 @@
 .\sample.o: button_EXINT/button.h
 .\sample.o: RIT/RIT.h
 .\sample.o: joystick/joystick.h
+.\sample.o: led/led.h

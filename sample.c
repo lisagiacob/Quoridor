@@ -33,6 +33,7 @@
 #include "button_EXINT/button.h"
 #include "RIT/RIT.h"
 #include "joystick/joystick.h"
+#include "led/led.h"
 
 #define SIMULATOR 1
 
@@ -47,9 +48,7 @@ int i = 20;								// variabile che mi gestice il timer dei 20 secondi. globale 
 int giocatore = 1;				// valori accettati: 1, 2
 
 int main(void)
-{
-	char str[2];
-	
+{	
   SystemInit();  												/* System Initialization (i.e., PLL)  */
 	
 	BUTTON_init();												/* BUTTON Initialization              */
@@ -81,18 +80,10 @@ int main(void)
 	//iniziano i rettangoli funzionali:
 	//LCD_DrawLine( 0, 245, 240, 245 , Black );		// -> lo schermo è largo 240
 	
+	
 	while(!vittoria){
-		enable_RIT();
-		for(i; i > 0; i--){							// quando il giocatore seleziona la mossa, metto i = 0
-			GUI_Text(0, 280, (uint8_t *) "Secondi mancanti:" , Blue, White);
-			sprintf(str, "%d", i);
-			GUI_Text(200, 280, (uint8_t *) str , Blue, White);
-			init_timer(0, 0x17D7840);											/* 1s */
-			enable_timer(0);
-		}
-		disable_RIT();
-		if(giocatore == 1) giocatore = 2;
-		else if(giocatore == 2) giocatore = 1; 
+		init_timer(0, 0x17D7840);											// 1s 
+		enable_timer(0);
 	}
 	//Finito il tempo (20 secondi) Si esegue l'irqHandler di time0 <- qua metto il passggio all'altro giocatore
 	
