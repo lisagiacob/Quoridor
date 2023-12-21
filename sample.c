@@ -28,6 +28,8 @@
 
 
 #include <stdio.h>
+#include <stdbool.h>  // Import the boolean header file 
+#include <string.h>
 #include "button_EXINT/button.h"
 #include "RIT/RIT.h"
 #include "joystick/joystick.h"
@@ -40,8 +42,8 @@ extern uint8_t ScaleFlag; // <- ScaleFlag needs to visible in order for the emul
 
 void scacchieraInit(void);
 
-bool vitttoria = 0;				// variabile globale che si setta ogni volta che si fa una mossa <- stta nel joystic
-int i = 0									// variabile che mi gestice il timer dei 20 secondi. globale per poterlo modificare all'interno del joystic
+bool vittoria = 0;				// variabile globale che si setta ogni volta che si fa una mossa <- stta nel joystic
+int i = 20;								// variabile che mi gestice il timer dei 20 secondi. globale per poterlo modificare all'interno del joystic
 int giocatore = 1;				// valori accettati: 1, 2
 
 int main(void)
@@ -62,7 +64,6 @@ int main(void)
 	//TouchPanel_Calibrate();
 	
 	LCD_Clear(Red);
-	GUI_Text(0, 280, (uint8_t *) " touch here : 1 sec to clear  ", Blue, White);
 	
 	//init_timer(0, 0x1312D0 ); 						/* 50ms * 25MHz = 1.25*10^6 = 0x1312D0 */
 	//init_timer(0, 0x6108 ); 						  /* 1ms * 25MHz = 25*10^3 = 0x6108 */
@@ -82,8 +83,12 @@ int main(void)
 	
 	while(!vittoria){
 		enable_RIT();
-		for(i; i < 20; i++){							// quando il giocatore seleziona la mossa, metto i = 20
-			init_timer(0, 17D7840);											/* 1s */
+		for(i; i > 0; i--){							// quando il giocatore seleziona la mossa, metto i = 0
+			GUI_Text(0, 280, (uint8_t *) strcat("Secondi mancanti:", (char*)i) , Blue, White);
+			char str[2];
+			sprintf(str, "%d", i);
+			GUI_Text(200, 280, (uint8_t *) str , Blue, White);
+			init_timer(0, 0x17D7840);											/* 1s */
 			enable_timer(0);
 		}
 		disable_RIT();

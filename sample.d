@@ -11,6 +11,8 @@
 .\sample.o: TouchPanel/TouchPanel.h
 .\sample.o: timer/timer.h
 .\sample.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\sample.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\sample.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\sample.o: button_EXINT/button.h
 .\sample.o: RIT/RIT.h
 .\sample.o: joystick/joystick.h
