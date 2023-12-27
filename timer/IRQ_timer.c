@@ -14,9 +14,6 @@
 #include "../GLCD/GLCD.h" 
 #include "../TouchPanel/TouchPanel.h"
 
-extern int i;
-extern int giocatore;
-
 /******************************************************************************
 ** Function name:		Timer0_IRQHandler
 **
@@ -29,20 +26,33 @@ extern int giocatore;
 
 void TIMER0_IRQHandler (void)
 {
-	char str[2];
+	static int clear = 0;
+	char time_in_char[5] = "";
 	
-	if(i > -1){
-			if(i==9) GUI_Text(150, 280, (uint8_t *) "  " , Blue, Red);
-			sprintf(str, "%i", i);
-			GUI_Text(150, 280, (uint8_t *) str , Blue, Red);
-			i--;
+  if(getDisplayPoint(&display, Read_Ads7846(), &matrix )){
+		if(display.y < 280){
+			TP_DrawPoint(display.x,display.y);
+			GUI_Text(200, 0, (uint8_t *) "     ", Blue, Blue);
+			clear = 0;
+		}
+		else{			
+			if(display.y <= 0x13E){			
+				clear++;
+				if(clear%20 == 0){
+					sprintf(time_in_char,"%4d",clear/20);
+					GUI_Text(200, 0, (uint8_t *) time_in_char, White, Blue);
+					if(clear == 200){	/* 1 seconds = 200 times * 500 us*/
+						LCD_Clear(Blue);
+						GUI_Text(0, 280, (uint8_t *) " touch here : 1 sec to clear ", Blue, White);			
+						clear = 0;
+					}
+				}
+			}
+		}
 	}
-	else {
-		i = 20;
-		if(giocatore == 1) giocatore = 2;
-		else if(giocatore == 2) giocatore = 1; 
+	else{
+		//do nothing if touch returns values out of bounds
 	}
-		
   LPC_TIM0->IR = 1;			/* clear interrupt flag */
   return;
 }
