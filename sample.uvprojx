@@ -138,7 +138,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -336,7 +336,7 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>--reduce_paths</MiscControls>
+              <MiscControls></MiscControls>
               <Define>SIMULATOR</Define>
               <Undefine></Undefine>
               <IncludePath></IncludePath>
@@ -419,11 +419,6 @@
           <GroupName>timer</GroupName>
           <Files>
             <File>
-              <FileName>timer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\timer\timer.h</FilePath>
-            </File>
-            <File>
               <FileName>IRQ_timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\timer\IRQ_timer.c</FilePath>
@@ -432,6 +427,11 @@
               <FileName>lib_timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\timer\lib_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\timer\timer.h</FilePath>
             </File>
           </Files>
         </Group>

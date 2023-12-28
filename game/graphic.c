@@ -2,12 +2,12 @@
 *		Graphic part implementation
 */
 
-//#include "timer.h"
+
+#include "timer/timer.h"
 #include "lpc17xx.h"
 #include "graphic.h"
 #include "board.h"
 #include <stdio.h>
-
 
 extern int wallsPlayer1;
 extern int wallsPlayer2;
@@ -15,6 +15,7 @@ extern int player;
 extern int i;
 
 /*
+
 *		Customize game
 */
 uint16_t color_player1 = Blue;
