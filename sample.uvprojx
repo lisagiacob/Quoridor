@@ -10,13 +10,13 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCLANG5</pCCUsed>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>LPC1768</Device>
           <Vendor>NXP</Vendor>
-          <PackID>Keil.LPC1700_DFP.2.7.1</PackID>
+          <PackID>Keil.LPC1700_DFP.2.7.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x10000000,0x8000) IRAM2(0x2007C000,0x8000) IROM(0x00000000,0x80000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -186,7 +186,6 @@
             <RvdsVP>0</RvdsVP>
             <RvdsMve>0</RvdsMve>
             <RvdsCdeCp>0</RvdsCdeCp>
-            <nBranchProt>0</nBranchProt>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -337,7 +336,7 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls></MiscControls>
+              <MiscControls>--reduce_paths</MiscControls>
               <Define>SIMULATOR</Define>
               <Undefine></Undefine>
               <IncludePath></IncludePath>
@@ -420,6 +419,11 @@
           <GroupName>timer</GroupName>
           <Files>
             <File>
+              <FileName>timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\timer\timer.h</FilePath>
+            </File>
+            <File>
               <FileName>IRQ_timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\timer\IRQ_timer.c</FilePath>
@@ -429,10 +433,30 @@
               <FileType>1</FileType>
               <FilePath>.\timer\lib_timer.c</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>game</GroupName>
+          <Files>
             <File>
-              <FileName>timer.h</FileName>
+              <FileName>graphic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\game\graphic.c</FilePath>
+            </File>
+            <File>
+              <FileName>graphic.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\timer\timer.h</FilePath>
+              <FilePath>.\game\graphic.h</FilePath>
+            </File>
+            <File>
+              <FileName>board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\game\board.c</FilePath>
+            </File>
+            <File>
+              <FileName>board.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\game\board.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -543,31 +567,6 @@
               <FileName>funct_joystick.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\joystick\funct_joystick.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>game</GroupName>
-          <Files>
-            <File>
-              <FileName>graphic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\game\graphic.c</FilePath>
-            </File>
-            <File>
-              <FileName>graphic.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\game\graphic.h</FilePath>
-            </File>
-            <File>
-              <FileName>board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\game\board.c</FilePath>
-            </File>
-            <File>
-              <FileName>board.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\game\board.h</FilePath>
             </File>
           </Files>
         </Group>

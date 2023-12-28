@@ -5,6 +5,8 @@
 ".\system_lpc17xx.o"
 ".\irq_timer.o"
 ".\lib_timer.o"
+".\graphic.o"
+".\board.o"
 ".\asciilib.o"
 ".\glcd.o"
 ".\hzlib.o"
@@ -15,8 +17,6 @@
 ".\lib_button.o"
 ".\lib_joystick.o"
 ".\funct_joystick.o"
-".\graphic.o"
-".\board.o"
 --strict --scatter ".\sample.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
