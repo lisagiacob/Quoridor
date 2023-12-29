@@ -40,11 +40,8 @@
 extern uint8_t ScaleFlag; // <- ScaleFlag needs to visible in order for the emulator to find the symbol (can be placed also inside system_LPC17xx.h but since it is RO, it needs more work)
 #endif
 
-
-
-
-
-
+int i = 20;								// variabile che mi gestice il timer dei 20 secondi. globale per poterlo modificare all'interno del joystic
+int player = 1;	
 
 int main(void)
 {
