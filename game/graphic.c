@@ -3,7 +3,7 @@
 */
 
 
-#include "timer/timer.h"
+#include "../timer/timer.h"
 #include "lpc17xx.h"
 #include "graphic.h"
 #include "board.h"
