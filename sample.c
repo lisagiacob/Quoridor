@@ -56,14 +56,11 @@ int main(void)
   
 	//TP_Init();
 	//TouchPanel_Calibrate();
-	
-	LCD_Clear(White);
-	
-	
-	init_game();
-	
+
 	BUTTON_init();												/* BUTTON Initialization              */
 	joystick_init();											/* Joystick Initialization            */
+	
+	init_game();
 	
 	
 	LPC_SC->PCON |= 0x1;									/* power-down	mode										*/

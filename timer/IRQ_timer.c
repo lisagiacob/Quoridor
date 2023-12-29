@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include "lpc17xx.h"
 #include "timer.h"
+#include "../game/graphic.h"
 #include "../GLCD/GLCD.h" 
 #include "../TouchPanel/TouchPanel.h"
 
@@ -73,11 +74,13 @@ void TIMER0_IRQHandler (void)
 void TIMER1_IRQHandler (void)
 {
 	char str[2];
-	
+	int d;
+	extern int distance_cell_tot;
+	//distance_cell_tot = 20;
 	if(i > -1){
-			if(i==9) GUI_Text(150, 280, (uint8_t *) "  " , Blue, Red);
+			if(i==9) GUI_Text(20+distance_cell_tot+20,  270, (uint8_t *) "  ", Black, White);
 			sprintf(str, "%i", i);
-			GUI_Text(150, 280, (uint8_t *) str , Blue, Red);
+			GUI_Text(20+distance_cell_tot+20,  270, (uint8_t *) str, Black, White);
 			i--;
 	}
 	else {
