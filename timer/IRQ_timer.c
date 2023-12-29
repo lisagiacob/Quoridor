@@ -67,25 +67,8 @@ void TIMER0_IRQHandler (void)
 ** Returned value:		None
 **
 ******************************************************************************/
-extern int i;
-extern int player;
-
 void TIMER1_IRQHandler (void)
 {
-	char str[2];
-
-	if(i > -1){
-			if(i==9) GUI_Text(150, 280, (uint8_t *) "  " , Blue, Red);
-			sprintf(str, "%i", i);
-			GUI_Text(150, 280, (uint8_t *) str , Blue, Red);
-			i--;
-	}
-	else {
-		i = 20;
-		if(player == 1) player = 2;
-		else if(player == 2) player = 1; 
-	}
-
   LPC_TIM1->IR = 1;			/* clear interrupt flag */
   return;
 }

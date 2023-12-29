@@ -11,8 +11,6 @@
 
 extern int wallsPlayer1;
 extern int wallsPlayer2;
-extern int player;
-extern int i;
 
 /*
 
@@ -25,6 +23,7 @@ uint16_t color_barrier_conf = Red;
 	
 char label[3][50] = {"P1Wall","0s","P2Wall"};
 char values_barrier[3][50] = {"8","","8"};
+
 
 
 
@@ -50,9 +49,7 @@ int step_barrier = 0;
 
 int x_point;
 int y_point;
-
 int t;
-
 
 //Initial player coordinate
 CoordinatePosition player1_coordinate;
@@ -555,11 +552,11 @@ void bottom_info_bar(void){
 	for(i = 0; i < 3; i++){
 		
 		if(i == 1){
-			
 			//Value of remaining Timer
 			GUI_Text(20+distance_cell_tot+20,  270, (uint8_t *) label[i], Black, White);
+			
 			t = player;
-			while(checkWinner() == -1){			//finchè non c'è ancora un vincitore
+			while(checkWinner() == -1){			//finch? non c'? ancora un vincitore
 				if(t != player){
 					i = 20;
 					t = player;
@@ -568,7 +565,7 @@ void bottom_info_bar(void){
 				enable_timer(1);
 			}
 			//Finito il tempo (20 secondi) Si esegue l'irqHandler di time1 <- qua metto il passggio all'altro player
-			
+
 			
 		}else{
 			

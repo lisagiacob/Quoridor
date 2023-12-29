@@ -175,7 +175,6 @@ int movePlayer(unsigned int player, unsigned int direction){
 		board[x][y] = 1;
 		player1[0][0] = x;
 		player1[0][1] = y;
-		player = 2;
 	}else if(player == 2){
 		oldX = player2[0][0];
 		oldY = player2[0][1];
@@ -183,7 +182,6 @@ int movePlayer(unsigned int player, unsigned int direction){
 		board[x][y] = 2;
 		player2[0][0] = x;
 		player2[0][1] = y;
-		player = 1;
 	}
 	
 	return checkWinner();

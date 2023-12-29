@@ -25,10 +25,6 @@ void EINT0_IRQHandler (void)	  	/* INT0														 */
 
 void EINT1_IRQHandler (void)	  	/* KEY1														 */
 {
-	/*
-	enable_RIT();				// enable RIT to count 50ms
-	NVIC_DisableIRQ(EINT1_IRQn);		// disable Button interrupts */
-	
 	//CREATE A NEW PLAYER BARRIER
 	
 	//add a new barrier (center of the board)
