@@ -1,7 +1,7 @@
 Dependencies for Project 'sample', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (.\startup_LPC17xx.s)(0x658C4254)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include--pd "__UVISION_VERSION SETA 536" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1" --pd "_RTE_ SETA 1"--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
-F (.\sample.c)(0x658EEA6A)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\sample.o --omf_browse .\sample.crf --depend .\sample.d)
+F (.\sample.c)(0x65914AD3)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\sample.o --omf_browse .\sample.crf --depend .\sample.d)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -29,7 +29,7 @@ I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsi
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\system_LPC17xx.h)(0x58493F92)
-F (.\timer\IRQ_timer.c)(0x658EF229)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_timer.o --omf_browse .\irq_timer.crf --depend .\irq_timer.d)
+F (.\timer\IRQ_timer.c)(0x65913532)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_timer.o --omf_browse .\irq_timer.crf --depend .\irq_timer.d)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602585E4)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\lpc17xx.h)(0x5E1DC4B4)
@@ -41,6 +41,7 @@ I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsi
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (timer\timer.h)(0x658E85FE)
+I (timer\../game/board.h)(0x658EEAA1)
 I (timer\../game/graphic.h)(0x658C5DBE)
 I (timer\../game/../GLCD/GLCD.h)(0x658C4256)
 I (timer\../TouchPanel/TouchPanel.h)(0x658C4256)
@@ -55,7 +56,7 @@ I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (timer\timer.h)(0x658E85FE)
 F (.\timer\timer.h)(0x658E85FE)()
-F (.\game\graphic.c)(0x658EF091)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\graphic.o --omf_browse .\graphic.crf --depend .\graphic.d)
+F (.\game\graphic.c)(0x658EF4D4)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\graphic.o --omf_browse .\graphic.crf --depend .\graphic.d)
 I (game\../timer/timer.h)(0x658E85FE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\lpc17xx.h)(0x5E1DC4B4)
@@ -106,7 +107,7 @@ I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (TouchPanel\../TouchPanel/TouchPanel.h)(0x658C4256)
 F (.\TouchPanel\TouchPanel.h)(0x658C4256)()
-F (.\RIT\IRQ_RIT.c)(0x658C4256)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_rit.o --omf_browse .\irq_rit.crf --depend .\irq_rit.d)
+F (.\RIT\IRQ_RIT.c)(0x659145BB)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_rit.o --omf_browse .\irq_rit.crf --depend .\irq_rit.d)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -116,6 +117,7 @@ I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsi
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (RIT\RIT.h)(0x658C4256)
+I (RIT\../game/board.h)(0x658EEAA1)
 F (.\RIT\lib_RIT.c)(0x658C4256)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_rit.o --omf_browse .\lib_rit.crf --depend .\lib_rit.d)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
@@ -151,7 +153,7 @@ I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsi
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\system_LPC17xx.h)(0x58493F92)
 F (.\button_EXINT\button.h)(0x658C4254)()
-F (.\joystick\lib_joystick.c)(0x658C4256)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_joystick.o --omf_browse .\lib_joystick.crf --depend .\lib_joystick.d)
+F (.\joystick\lib_joystick.c)(0x659147F7)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_joystick.o --omf_browse .\lib_joystick.crf --depend .\lib_joystick.d)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)

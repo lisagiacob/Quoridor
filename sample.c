@@ -47,21 +47,16 @@ int main(void)
 {
 	
   SystemInit();  												/* System Initialization (i.e., PLL)  */
-	
-	//init_RIT(0x004C4B40);									/* RIT Initialization 50 msec       	*/
-	//enable_RIT();													/* RIT enabled												*/
-	
-  LCD_Initialization();
-	
-  
-	//TP_Init();
-	//TouchPanel_Calibrate();
-
 	BUTTON_init();												/* BUTTON Initialization              */
 	joystick_init();											/* Joystick Initialization            */
-	
+	init_RIT(0x004C4B40);									/* RIT Initialization 50 msec       	*/
+	enable_RIT();													/* RIT enabled												*/
+  
+	TP_Init();
+	//TouchPanel_Calibrate();
+
+  LCD_Initialization();
 	init_game();
-	
 	
 	LPC_SC->PCON |= 0x1;									/* power-down	mode										*/
 	LPC_SC->PCON &= ~(0x2);						

@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include "lpc17xx.h"
 #include "timer.h"
+#include "../game/board.h"
 #include "../game/graphic.h"
 #include "../GLCD/GLCD.h" 
 #include "../TouchPanel/TouchPanel.h"
@@ -27,6 +28,7 @@
 
 extern int i;
 extern int player;
+extern int t;
 
 void TIMER0_IRQHandler (void)
 {
@@ -76,19 +78,28 @@ void TIMER1_IRQHandler (void)
 	char str[2];
 	int d;
 	extern int distance_cell_tot;
-	//distance_cell_tot = 20;
-	if(i > -1){
-			if(i==9) GUI_Text(20+distance_cell_tot+20,  270, (uint8_t *) "  ", Black, White);
-			sprintf(str, "%i", i);
-			GUI_Text(20+distance_cell_tot+20,  270, (uint8_t *) str, Black, White);
-			i--;
-	}
-	else {
-		i = 20;
-		if(player == 1) player = 2;
-		else if(player == 2) player = 1; 
-	}
+	distance_cell_tot = 69;
 	
+		while(checkWinner() == -1){			//finchè non c'è ancora un vincitore
+			if(t != player){
+				i = 20;
+				t = player;
+			}
+			if(i > -1){
+					if(i==9) GUI_Text(20+distance_cell_tot+20,  270, (uint8_t *) "  ", Black, White);
+					sprintf(str, "%i", i);
+					GUI_Text(20+distance_cell_tot+20,  270, (uint8_t *) str, Black, White);
+					i--;
+			}
+			else {
+				i = 20;
+				if(player == 1) player = 2;
+				else if(player == 2) player = 1; 
+			}
+			init_timer(1, 0x17D7840);											// 1s 
+			enable_timer(1);
+		}
+
   LPC_TIM1->IR = 1;			/* clear interrupt flag */
   return;
 }
