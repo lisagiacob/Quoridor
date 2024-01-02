@@ -13,6 +13,6 @@ void confirm_barrier(void);
 void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_direction);
 void move_barrier(uint16_t x, uint16_t y, unsigned int angle_barrier, unsigned int move_direction);
 void rotate_barrier(uint16_t x, uint16_t y);
-
-
-
+void draw_player( uint16_t x, uint16_t y, unsigned int player);
+void confirm_barrier(void);
+void delete_barrier(uint16_t x, uint16_t y, unsigned int direction);

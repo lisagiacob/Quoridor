@@ -565,7 +565,6 @@ void bottom_info_bar(void){
 				init_timer(1, 0x17D7840);											// 1s 
 				enable_timer(1);
 			}*/
-				init_timer(1, 0x17D7840);											// 1s 
 				enable_timer(1);
 			//Finito il tempo (20 secondi) Si esegue l'irqHandler di time1 <- qua metto il passggio all'altro player
 

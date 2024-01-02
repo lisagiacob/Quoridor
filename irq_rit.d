@@ -8,4 +8,5 @@
 .\irq_rit.o: C:\Users\Lisa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h
 .\irq_rit.o: C:\Users\Lisa\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.0\Device\Include\system_LPC17xx.h
 .\irq_rit.o: RIT\RIT.h
-.\irq_rit.o: RIT\../game/board.h
+.\irq_rit.o: RIT\../game/graphic.h
+.\irq_rit.o: RIT\../game/../GLCD/GLCD.h

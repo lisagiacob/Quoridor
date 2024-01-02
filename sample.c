@@ -32,7 +32,7 @@
 #include "RIT/RIT.h"
 #include "joystick/joystick.h"
 
-#include "game/graphic.h" 
+#include "game/graphic.h"
 
 #define SIMULATOR 1
 
@@ -42,6 +42,7 @@ extern uint8_t ScaleFlag; // <- ScaleFlag needs to visible in order for the emul
 
 int i = 20;								// variabile che mi gestice il timer dei 20 secondi. globale per poterlo modificare all'interno del joystic
 int player = 1;	
+int barrier = 0;
 
 int main(void)
 {
@@ -51,6 +52,7 @@ int main(void)
 	joystick_init();											/* Joystick Initialization            */
 	init_RIT(0x004C4B40);									/* RIT Initialization 50 msec       	*/
 	enable_RIT();													/* RIT enabled												*/
+	init_timer(1, 0x017D7840);											// 1s 
   
 	TP_Init();
 	//TouchPanel_Calibrate();

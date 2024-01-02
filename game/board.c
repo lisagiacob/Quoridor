@@ -3,6 +3,7 @@
 */
 
 #include "board.h"
+#include "graphic.h"
 
 unsigned int board[13][13] = {{0}};
 unsigned int player1[1][2] = {{0,6}};
