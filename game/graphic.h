@@ -16,3 +16,4 @@ void rotate_barrier(uint16_t x, uint16_t y);
 void draw_player( uint16_t x, uint16_t y, unsigned int player);
 void confirm_barrier(void);
 void delete_barrier(uint16_t x, uint16_t y, unsigned int direction);
+int limited_move(int jump);

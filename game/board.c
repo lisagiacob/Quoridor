@@ -10,6 +10,7 @@ unsigned int player1[1][2] = {{0,6}};
 unsigned int player2[1][2] = {{12,6}};
 unsigned int wallsPlayer1 = 8;
 unsigned int wallsPlayer2 = 8;
+extern int jump;
 
 void initGame(void){
 	board[0][6] = 1;
@@ -184,7 +185,9 @@ int movePlayer(unsigned int player, unsigned int direction){
 		player2[0][0] = x;
 		player2[0][1] = y;
 	}
-	
+	if(limited_move(jump) == 1){
+		return 0;
+	}
 	return checkWinner();
 }
 

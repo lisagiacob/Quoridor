@@ -30,6 +30,10 @@ extern int i;
 extern int player, barrier;
 extern int t;
 
+extern CoordinatePosition start_round;
+extern CoordinatePosition player1_coordinate;
+extern CoordinatePosition player2_coordinate;
+
 void TIMER0_IRQHandler (void)
 {
 	static int clear = 0;
@@ -84,6 +88,14 @@ void TIMER1_IRQHandler (void)
 				i = 20;
 				t = player;
 				barrier = 0;
+				if(player == 1){
+					start_round.x = player1_coordinate.x;
+					start_round.y = player1_coordinate.y;
+				}
+				if(player == 2){
+					start_round.x = player2_coordinate.x;
+					start_round.y = player2_coordinate.y;
+				}
 			}
 			if(i > -1){
 					if(i==9) GUI_Text(20+distance_cell_tot+20,  270, (uint8_t *) "  ", Black, White);

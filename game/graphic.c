@@ -50,6 +50,7 @@ int step_barrier = 0;
 int x_point;
 int y_point;
 int t;
+int jump = 0;
 
 //Initial player coordinate
 CoordinatePosition player1_coordinate;
@@ -62,9 +63,11 @@ CoordinatePosition barrier_coordinate;
 //player position
 CoordinatePosition player_position1;
 CoordinatePosition player_position2;
+CoordinatePosition start_round;
 //barrier position
 CoordinatePosition barrier_init_position;
 CoordinatePosition barrier_position;
+
 
 
 //global
@@ -130,9 +133,9 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 					//ERROR: out of border
 				}else{
 					game_status = movePlayer(player, move_direction);
-					
 					if(game_status != 0){
 						if(((player_position2.y - step_player) == player_position1.y) &&  (player_position2.x == player_position1.x)) { 
+							jump = 1;
 							y = y - 2*step_player;
 							player_position2.y = y;
 							player2_coordinate.x = player2_coordinate.x - 4;
@@ -149,20 +152,21 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 					//ERROR: out of border
 				}else{
 					game_status = movePlayer(player, move_direction);
+				if(game_status != 0){
 					if(((player_position1.y - step_player) == player_position2.y) &&  (player_position2.x == player_position1.x)) {
-					if(game_status != 0){
+						jump = 1;
 						y = y - 2*step_player;
 						player_position1.y = y;
 						player1_coordinate.x = player1_coordinate.x - 4;	
-					}
-				}else{
+					}else{
 					y = y - step_player;
 						player_position1.y = y;
 						player1_coordinate.x = player1_coordinate.x - 2;
-				}					
+					}					
 				}
 			}
-				break;			
+		}
+			break;			
 			case 1:
 				//dx
 			if(player == 2){
@@ -171,12 +175,13 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 				}else{
 					game_status = movePlayer(player, move_direction);
 					if((player_position2.y == player_position1.y) &&  ((player_position2.x + step_player)  == player_position1.x)) { 
-						if(game_status != 0){
-							x = x + 2*step_player;
-							player_position2.x = x;
-							player2_coordinate.y = player2_coordinate.y + 4;
-						}
-					}else{
+							jump = 1;
+					if(game_status != 0){
+						x = x + 2*step_player;
+						player_position2.x = x;
+						player2_coordinate.y = player2_coordinate.y + 4;
+					}
+						}else{
 							x = x + step_player;
 							player_position2.x = x;
 							player2_coordinate.y = player2_coordinate.y + 2;
@@ -188,11 +193,12 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 				}else{
 					game_status = movePlayer(player, move_direction);
 					if((player_position2.y == player_position1.y) &&  ((player_position1.x + step_player)  == player_position2.x)) {
+							jump = 1;
 						if(game_status != 0){
 							x = x + 2*step_player;
 							player_position1.x = x;
 							player1_coordinate.y = player1_coordinate.y + 4;
-						}
+						
 					}else{
 						x = x + step_player;
 						player_position1.x = x;
@@ -200,7 +206,8 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 					}
 				}
 			}		
-				break;
+		}
+			break;
 			case 2:
 				//down
 			if(player == 2){
@@ -209,6 +216,7 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 				}else{
 					game_status = movePlayer(player, move_direction);
 					if(((player_position2.y + step_player) == player_position1.y) &&  (player_position2.x  == player_position1.x)) {
+							jump = 1;
 						if(game_status != 0){
 							y = y + 2*step_player;
 							player_position2.y = y;
@@ -225,8 +233,10 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 				//ERROR: out of border
 				}else{
 					game_status = movePlayer(player, move_direction);
-					if(((player_position1.y + step_player) == player_position2.y) &&  (player_position2.x  == player_position1.x)) {
-						if(game_status != 0){
+					
+					if(game_status != 0){
+						if(((player_position1.y + step_player) == player_position2.y) &&  (player_position2.x  == player_position1.x)) {
+							jump = 1;
 							y = y + 2*step_player;
 							player_position1.y = y;
 							player1_coordinate.x = player1_coordinate.x + 4;
@@ -238,7 +248,8 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 					}
 				}
 			}
-				break;
+		}
+			break;
 			case 3:
 				//sx
 			if(player == 2){
@@ -246,8 +257,10 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 				//ERROR: out of border
 				}else{
 					game_status = movePlayer(player, move_direction);
-					if((player_position2.y == player_position1.y) &&  ((player_position2.x - step_player)  == player_position1.x)) { 
-						if(game_status != 0){
+					
+					if(game_status != 0){
+						if((player_position2.y == player_position1.y) &&  ((player_position2.x - step_player)  == player_position1.x)) { 
+							jump = 1;
 							x = x - 2*step_player;
 							player_position2.x = x;
 							player2_coordinate.y = player2_coordinate.y - 4;						
@@ -263,8 +276,10 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 				//ERROR: out of border
 				}else{
 					game_status = movePlayer(player, move_direction);
-					if((player_position2.y == player_position1.y) &&  ((player_position1.x - step_player)  == player_position2.x)) {
-						if(game_status != 0){
+					
+					if(game_status != 0){
+						if((player_position2.y == player_position1.y) &&  ((player_position1.x - step_player)  == player_position2.x)) {
+							jump = 1;
 							x = x - 2*step_player;
 							player_position1.x = x;
 							player1_coordinate.y = player1_coordinate.y - 4;		
@@ -276,9 +291,11 @@ void move_player(uint16_t x, uint16_t y, unsigned int player, unsigned int move_
 					}
 				}
 			}
-				break;
-			}
+		}
+			break;
+			
 		
+			jump = 0;
 			
 			//if permitted = 1 the player has a new position, if permitted = 0 the player is drawn in the same old position 
 			draw_player(x, y, player);
@@ -531,6 +548,35 @@ void create_barrier(void){
 	barrier_position.x = x;
 	barrier_position.y = y;
 	
+}
+
+//A player can only move of one point
+//step_player: numero di caselle di spostamento
+//jump: 1 se deve saltare l'altra pedine
+int limited_move(int jump){	
+	int movX, movY;
+	if(player == 1){
+		movX = player1_coordinate.x - start_round.x;
+		movY = player1_coordinate.y - start_round.y;
+	}
+	if(player == 2){
+		movX = player2_coordinate.x - start_round.x;
+		movY = player2_coordinate.y - start_round.y;
+	}
+	if(jump == 0 && movX == 0 && movY == 1){
+		return 0;
+	}
+	else if(jump == 0 && movX == 1 && movY == 0){
+		return 0;
+	}	
+	//salta l'altro player
+	else if(jump == 1 && movX == 0 && movY == 2){
+		return 0;
+	}
+	else if(jump == 1 && movX == 2 && movY == 0){
+		return 0;
+	}
+	else return 1;
 }
 
 /***********************************************************************************
