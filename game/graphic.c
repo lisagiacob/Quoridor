@@ -544,7 +544,7 @@ void update_barrier(void){
 		char str[2];
 	
 		sprintf(str, "%i", player == 1 ? wallsPlayer1 : wallsPlayer2);
-		GUI_Text(player == 1 ? 115 : 190, 280, (uint8_t *) str, Black, White);
+		GUI_Text(player == 1 ? 40 : 190, 280, (uint8_t *) str, Black, White);
 	
 }
 

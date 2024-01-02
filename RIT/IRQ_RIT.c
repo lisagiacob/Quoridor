@@ -64,7 +64,7 @@ void RIT_IRQHandler (void)
 	}
 	
 	if((LPC_GPIO1->FIOPIN & (1<<26)) == 0){
-			//Joystic select
+			//Joystic down
 			down ++;
 		switch(down){
 			case 1:
@@ -128,32 +128,6 @@ void RIT_IRQHandler (void)
 	else{
 		up = 0;
 	}
-		
-		
-/*
-	static int down=0;	
-	down++;
-	if((LPC_GPIO2->FIOPIN & (1<<11)) == 0){
-		static uint8_t position=0;
-		reset_RIT();
-		switch(down){
-			case 1:
-				if( position == 7){
-					position = 0;
-				}
-				break;
-			default:
-				break;
-		}
-	}
-	else {	// button released
-		down=0;			
-		disable_RIT();
-		reset_RIT();
-		NVIC_EnableIRQ(EINT1_IRQn);							 // disable Button interrupts			
-		LPC_PINCON->PINSEL4    |= (1 << 22);     // External interrupt 0 pin selection 
-	}*/
-		
 	
   LPC_RIT->RICTRL |= 0x1;	/* clear interrupt flag */
 	

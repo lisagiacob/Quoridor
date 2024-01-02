@@ -292,31 +292,31 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     RESET                                    0x00000000   Section      204  startup_lpc17xx.o(RESET)
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/dczerorl2.s                0x00000000   Number         0  __dczerorl2.o ABSOLUTE
-    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
-    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
@@ -325,40 +325,40 @@ Image Symbol Table
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_v6.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __2sprintf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  noretval__2sprintf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __2sprintf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  noretval__2sprintf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _sputc.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _sputc.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_i.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_i.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
     ../fplib/daddsub.s                       0x00000000   Number         0  daddsub_clz.o ABSOLUTE
@@ -458,8 +458,13 @@ Image Symbol Table
     .ARM.Collect$$rtexit$$00000004           0x000001c6   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
     .text                                    0x000001cc   Section       52  startup_lpc17xx.o(.text)
     .text                                    0x00000200   Section        0  sample.o(.text)
-    .text                                    0x00000258   Section        0  asciilib.o(.text)
-    .text                                    0x00000278   Section        0  lib_joystick.o(.text)
+    .text                                    0x00000268   Section        0  asciilib.o(.text)
+    .text                                    0x00000288   Section        0  noretval__2sprintf.o(.text)
+    .text                                    0x000002b0   Section        0  heapauxi.o(.text)
+    .text                                    0x000002b8   Section        0  _printf_char_common.o(.text)
+    _printf_input_char                       0x000002b9   Thumb Code    10  _printf_char_common.o(.text)
+    .text                                    0x000002e8   Section        0  _sputc.o(.text)
+    .text                                    0x000002f4   Section        8  libspace.o(.text)
     .ARM.__at_0x02FC                         0x000002fc   Section        4  startup_lpc17xx.o(.ARM.__at_0x02FC)
     .text                                    0x00000300   Section        0  system_lpc17xx.o(.text)
     .text                                    0x0000054c   Section        0  irq_timer.o(.text)
@@ -479,24 +484,19 @@ Image Symbol Table
     .text                                    0x00005fe4   Section        0  lib_button.o(.text)
     __NVIC_EnableIRQ                         0x00005fe5   Thumb Code    34  lib_button.o(.text)
     __NVIC_SetPriority                       0x00006007   Thumb Code    32  lib_button.o(.text)
-    .text                                    0x000060b0   Section        0  noretval__2sprintf.o(.text)
-    .text                                    0x000060d8   Section        0  __printf.o(.text)
-    .text                                    0x00006140   Section        0  _printf_dec.o(.text)
-    .text                                    0x000061b8   Section      138  rt_memcpy_v6.o(.text)
-    .text                                    0x00006242   Section        0  heapauxi.o(.text)
-    .text                                    0x00006248   Section        0  _printf_intcommon.o(.text)
-    .text                                    0x000062fc   Section        0  _printf_char_common.o(.text)
-    _printf_input_char                       0x000062fd   Thumb Code    10  _printf_char_common.o(.text)
-    .text                                    0x0000632c   Section        0  _sputc.o(.text)
-    .text                                    0x00006336   Section      100  rt_memcpy_w.o(.text)
-    .text                                    0x0000639a   Section       74  sys_stackheap_outer.o(.text)
-    .text                                    0x000063e4   Section        0  exit.o(.text)
-    .text                                    0x000063f8   Section        8  libspace.o(.text)
-    .text                                    0x00006400   Section        0  sys_exit.o(.text)
-    .text                                    0x0000640c   Section        2  use_no_semi.o(.text)
-    .constdata                               0x0000640e   Section     1520  asciilib.o(.constdata)
-    .text                                    0x0000640e   Section        0  indicate_semi.o(.text)
-    AsciiLib                                 0x0000640e   Data        1520  asciilib.o(.constdata)
+    .text                                    0x000060b0   Section        0  lib_joystick.o(.text)
+    .text                                    0x00006134   Section        0  __printf.o(.text)
+    .text                                    0x0000619c   Section        0  _printf_dec.o(.text)
+    .text                                    0x00006214   Section      138  rt_memcpy_v6.o(.text)
+    .text                                    0x0000629e   Section        0  _printf_intcommon.o(.text)
+    .text                                    0x00006350   Section      100  rt_memcpy_w.o(.text)
+    .text                                    0x000063b4   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x000063fe   Section        0  exit.o(.text)
+    .text                                    0x00006410   Section        0  sys_exit.o(.text)
+    .text                                    0x0000641c   Section        2  use_no_semi.o(.text)
+    .constdata                               0x0000641e   Section     1520  asciilib.o(.constdata)
+    .text                                    0x0000641e   Section        0  indicate_semi.o(.text)
+    AsciiLib                                 0x0000641e   Data        1520  asciilib.o(.constdata)
     .data                                    0x10000000   Section       12  sample.o(.data)
     .data                                    0x1000000c   Section        5  system_lpc17xx.o(.data)
     .data                                    0x10000014   Section       24  board.o(.data)
@@ -651,9 +651,17 @@ Image Symbol Table
     USB_IRQHandler                           0x000001e3   Thumb Code     0  startup_lpc17xx.o(.text)
     WDT_IRQHandler                           0x000001e3   Thumb Code     0  startup_lpc17xx.o(.text)
     __user_initial_stackheap                 0x000001e5   Thumb Code     0  startup_lpc17xx.o(.text)
-    main                                     0x00000201   Thumb Code    74  sample.o(.text)
-    GetASCIICode                             0x00000259   Thumb Code    26  asciilib.o(.text)
-    joystick_init                            0x00000279   Thumb Code   122  lib_joystick.o(.text)
+    main                                     0x00000201   Thumb Code    86  sample.o(.text)
+    GetASCIICode                             0x00000269   Thumb Code    26  asciilib.o(.text)
+    __2sprintf                               0x00000289   Thumb Code    34  noretval__2sprintf.o(.text)
+    __use_two_region_memory                  0x000002b1   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x000002b3   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x000002b5   Thumb Code     2  heapauxi.o(.text)
+    _printf_char_common                      0x000002c3   Thumb Code    32  _printf_char_common.o(.text)
+    _sputc                                   0x000002e9   Thumb Code    10  _sputc.o(.text)
+    __user_libspace                          0x000002f5   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x000002f5   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x000002f5   Thumb Code     0  libspace.o(.text)
     SystemInit                               0x00000301   Thumb Code   552  system_lpc17xx.o(.text)
     TIMER0_IRQHandler                        0x0000054d   Thumb Code     2  irq_timer.o(.text)
     TIMER1_IRQHandler                        0x0000054f   Thumb Code   236  irq_timer.o(.text)
@@ -697,33 +705,25 @@ Image Symbol Table
     EINT1_IRQHandler                         0x00005f19   Thumb Code   146  irq_button.o(.text)
     EINT2_IRQHandler                         0x00005fab   Thumb Code    34  irq_button.o(.text)
     BUTTON_init                              0x00006027   Thumb Code   118  lib_button.o(.text)
-    __2sprintf                               0x000060b1   Thumb Code    34  noretval__2sprintf.o(.text)
-    __printf                                 0x000060d9   Thumb Code   104  __printf.o(.text)
-    _printf_int_dec                          0x00006141   Thumb Code   104  _printf_dec.o(.text)
-    __aeabi_memcpy                           0x000061b9   Thumb Code     0  rt_memcpy_v6.o(.text)
-    __rt_memcpy                              0x000061b9   Thumb Code   138  rt_memcpy_v6.o(.text)
-    _memcpy_lastbytes                        0x0000621f   Thumb Code     0  rt_memcpy_v6.o(.text)
-    __use_two_region_memory                  0x00006243   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_escrow$2region                 0x00006245   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_expand$2region                 0x00006247   Thumb Code     2  heapauxi.o(.text)
-    _printf_int_common                       0x00006249   Thumb Code   178  _printf_intcommon.o(.text)
-    _printf_char_common                      0x00006307   Thumb Code    32  _printf_char_common.o(.text)
-    _sputc                                   0x0000632d   Thumb Code    10  _sputc.o(.text)
-    __aeabi_memcpy4                          0x00006337   Thumb Code     0  rt_memcpy_w.o(.text)
-    __aeabi_memcpy8                          0x00006337   Thumb Code     0  rt_memcpy_w.o(.text)
-    __rt_memcpy_w                            0x00006337   Thumb Code   100  rt_memcpy_w.o(.text)
-    _memcpy_lastbytes_aligned                0x0000637f   Thumb Code     0  rt_memcpy_w.o(.text)
-    __user_setup_stackheap                   0x0000639b   Thumb Code    74  sys_stackheap_outer.o(.text)
-    exit                                     0x000063e5   Thumb Code    18  exit.o(.text)
-    __user_libspace                          0x000063f9   Thumb Code     8  libspace.o(.text)
-    __user_perproc_libspace                  0x000063f9   Thumb Code     0  libspace.o(.text)
-    __user_perthread_libspace                0x000063f9   Thumb Code     0  libspace.o(.text)
-    _sys_exit                                0x00006401   Thumb Code     8  sys_exit.o(.text)
-    __I$use$semihosting                      0x0000640d   Thumb Code     0  use_no_semi.o(.text)
-    __use_no_semihosting_swi                 0x0000640d   Thumb Code     2  use_no_semi.o(.text)
-    __semihosting_library_function           0x0000640f   Thumb Code     0  indicate_semi.o(.text)
-    Region$$Table$$Base                      0x00006a00   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00006a40   Number         0  anon$$obj.o(Region$$Table)
+    joystick_init                            0x000060b1   Thumb Code   122  lib_joystick.o(.text)
+    __printf                                 0x00006135   Thumb Code   104  __printf.o(.text)
+    _printf_int_dec                          0x0000619d   Thumb Code   104  _printf_dec.o(.text)
+    __aeabi_memcpy                           0x00006215   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __rt_memcpy                              0x00006215   Thumb Code   138  rt_memcpy_v6.o(.text)
+    _memcpy_lastbytes                        0x0000627b   Thumb Code     0  rt_memcpy_v6.o(.text)
+    _printf_int_common                       0x0000629f   Thumb Code   178  _printf_intcommon.o(.text)
+    __aeabi_memcpy4                          0x00006351   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x00006351   Thumb Code     0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x00006351   Thumb Code   100  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes_aligned                0x00006399   Thumb Code     0  rt_memcpy_w.o(.text)
+    __user_setup_stackheap                   0x000063b5   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x000063ff   Thumb Code    18  exit.o(.text)
+    _sys_exit                                0x00006411   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x0000641d   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x0000641d   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x0000641f   Thumb Code     0  indicate_semi.o(.text)
+    Region$$Table$$Base                      0x00006a10   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00006a50   Number         0  anon$$obj.o(Region$$Table)
     i                                        0x10000000   Data           4  sample.o(.data)
     player                                   0x10000004   Data           4  sample.o(.data)
     barrier                                  0x10000008   Data           4  sample.o(.data)
@@ -777,9 +777,9 @@ Memory Map of the image
 
   Image Entry point : 0x000000cd
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00006c40, Max: 0x00080000, ABSOLUTE, COMPRESSED[0x00006aa8])
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00006c50, Max: 0x00080000, ABSOLUTE, COMPRESSED[0x00006ab8])
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00006a40, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00006a50, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -837,9 +837,15 @@ Memory Map of the image
     0x000001c2   0x000001c2   0x00000004   Code   RO          705    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
     0x000001c6   0x000001c6   0x00000006   Code   RO          706    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x000001cc   0x000001cc   0x00000034   Code   RO            5    .text               startup_lpc17xx.o
-    0x00000200   0x00000200   0x00000058   Code   RO           16    .text               sample.o
-    0x00000258   0x00000258   0x00000020   Code   RO          271    .text               asciilib.o
-    0x00000278   0x00000278   0x00000084   Code   RO          466    .text               lib_joystick.o
+    0x00000200   0x00000200   0x00000068   Code   RO           16    .text               sample.o
+    0x00000268   0x00000268   0x00000020   Code   RO          271    .text               asciilib.o
+    0x00000288   0x00000288   0x00000028   Code   RO          549    .text               c_w.l(noretval__2sprintf.o)
+    0x000002b0   0x000002b0   0x00000006   Code   RO          581    .text               c_w.l(heapauxi.o)
+    0x000002b6   0x000002b6   0x00000002   PAD
+    0x000002b8   0x000002b8   0x00000030   Code   RO          612    .text               c_w.l(_printf_char_common.o)
+    0x000002e8   0x000002e8   0x0000000a   Code   RO          614    .text               c_w.l(_sputc.o)
+    0x000002f2   0x000002f2   0x00000002   PAD
+    0x000002f4   0x000002f4   0x00000008   Code   RO          653    .text               c_w.l(libspace.o)
     0x000002fc   0x000002fc   0x00000004   Code   RO            4    .ARM.__at_0x02FC    startup_lpc17xx.o
     0x00000300   0x00000300   0x0000024c   Code   RO          101    .text               system_lpc17xx.o
     0x0000054c   0x0000054c   0x0000011c   Code   RO          128    .text               irq_timer.o
@@ -851,45 +857,39 @@ Memory Map of the image
     0x00005e74   0x00005e74   0x00000094   Code   RO          372    .text               lib_rit.o
     0x00005f08   0x00005f08   0x000000dc   Code   RO          400    .text               irq_button.o
     0x00005fe4   0x00005fe4   0x000000cc   Code   RO          438    .text               lib_button.o
-    0x000060b0   0x000060b0   0x00000028   Code   RO          549    .text               c_w.l(noretval__2sprintf.o)
-    0x000060d8   0x000060d8   0x00000068   Code   RO          551    .text               c_w.l(__printf.o)
-    0x00006140   0x00006140   0x00000078   Code   RO          553    .text               c_w.l(_printf_dec.o)
-    0x000061b8   0x000061b8   0x0000008a   Code   RO          577    .text               c_w.l(rt_memcpy_v6.o)
-    0x00006242   0x00006242   0x00000006   Code   RO          581    .text               c_w.l(heapauxi.o)
-    0x00006248   0x00006248   0x000000b2   Code   RO          610    .text               c_w.l(_printf_intcommon.o)
-    0x000062fa   0x000062fa   0x00000002   PAD
-    0x000062fc   0x000062fc   0x00000030   Code   RO          612    .text               c_w.l(_printf_char_common.o)
-    0x0000632c   0x0000632c   0x0000000a   Code   RO          614    .text               c_w.l(_sputc.o)
-    0x00006336   0x00006336   0x00000064   Code   RO          617    .text               c_w.l(rt_memcpy_w.o)
-    0x0000639a   0x0000639a   0x0000004a   Code   RO          643    .text               c_w.l(sys_stackheap_outer.o)
-    0x000063e4   0x000063e4   0x00000012   Code   RO          645    .text               c_w.l(exit.o)
-    0x000063f6   0x000063f6   0x00000002   PAD
-    0x000063f8   0x000063f8   0x00000008   Code   RO          653    .text               c_w.l(libspace.o)
-    0x00006400   0x00006400   0x0000000c   Code   RO          714    .text               c_w.l(sys_exit.o)
-    0x0000640c   0x0000640c   0x00000002   Code   RO          725    .text               c_w.l(use_no_semi.o)
-    0x0000640e   0x0000640e   0x00000000   Code   RO          727    .text               c_w.l(indicate_semi.o)
-    0x0000640e   0x0000640e   0x000005f0   Data   RO          272    .constdata          asciilib.o
-    0x000069fe   0x000069fe   0x00000002   PAD
-    0x00006a00   0x00006a00   0x00000040   Data   RO          782    Region$$Table       anon$$obj.o
+    0x000060b0   0x000060b0   0x00000084   Code   RO          466    .text               lib_joystick.o
+    0x00006134   0x00006134   0x00000068   Code   RO          551    .text               c_w.l(__printf.o)
+    0x0000619c   0x0000619c   0x00000078   Code   RO          553    .text               c_w.l(_printf_dec.o)
+    0x00006214   0x00006214   0x0000008a   Code   RO          577    .text               c_w.l(rt_memcpy_v6.o)
+    0x0000629e   0x0000629e   0x000000b2   Code   RO          610    .text               c_w.l(_printf_intcommon.o)
+    0x00006350   0x00006350   0x00000064   Code   RO          617    .text               c_w.l(rt_memcpy_w.o)
+    0x000063b4   0x000063b4   0x0000004a   Code   RO          643    .text               c_w.l(sys_stackheap_outer.o)
+    0x000063fe   0x000063fe   0x00000012   Code   RO          645    .text               c_w.l(exit.o)
+    0x00006410   0x00006410   0x0000000c   Code   RO          714    .text               c_w.l(sys_exit.o)
+    0x0000641c   0x0000641c   0x00000002   Code   RO          725    .text               c_w.l(use_no_semi.o)
+    0x0000641e   0x0000641e   0x00000000   Code   RO          727    .text               c_w.l(indicate_semi.o)
+    0x0000641e   0x0000641e   0x000005f0   Data   RO          272    .constdata          asciilib.o
+    0x00006a0e   0x00006a0e   0x00000002   PAD
+    0x00006a10   0x00006a10   0x00000040   Data   RO          782    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x10000000, Load base: 0x00006a40, Size: 0x00000348, Max: 0x00008000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x10000000, Load base: 0x00006a50, Size: 0x00000348, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x10000000   0x00006a40   0x0000000c   Data   RW           17    .data               sample.o
-    0x1000000c   0x00006a4c   0x00000005   Data   RW          102    .data               system_lpc17xx.o
-    0x10000011   0x00006a51   0x00000003   PAD
-    0x10000014   0x00006a54   0x00000018   Data   RW          247    .data               board.o
-    0x1000002c   0x00006a6c   0x00000001   Data   RW          292    .data               glcd.o
-    0x1000002d   0x00006a6d   0x00000003   PAD
-    0x10000030   0x00006a70   0x00000014   Data   RW          338    .data               irq_rit.o
+    0x10000000   0x00006a50   0x0000000c   Data   RW           17    .data               sample.o
+    0x1000000c   0x00006a5c   0x00000005   Data   RW          102    .data               system_lpc17xx.o
+    0x10000011   0x00006a61   0x00000003   PAD
+    0x10000014   0x00006a64   0x00000018   Data   RW          247    .data               board.o
+    0x1000002c   0x00006a7c   0x00000001   Data   RW          292    .data               glcd.o
+    0x1000002d   0x00006a7d   0x00000003   PAD
+    0x10000030   0x00006a80   0x00000014   Data   RW          338    .data               irq_rit.o
     0x10000044        -       0x000002a4   Zero   RW          246    .bss                board.o
     0x100002e8        -       0x00000060   Zero   RW          654    .bss                c_w.l(libspace.o)
     0x10000348        -       0x00000000   Zero   RW            2    HEAP                startup_lpc17xx.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x2007c000, Load base: 0x00006a84, Size: 0x000003c0, Max: 0x00008000, ABSOLUTE, COMPRESSED[0x00000024])
+    Execution Region RW_IRAM2 (Exec base: 0x2007c000, Load base: 0x00006a94, Size: 0x000003c0, Max: 0x00008000, ABSOLUTE, COMPRESSED[0x00000024])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -908,7 +908,7 @@ Image component sizes
         32          6       1520          0          0        883   asciilib.o
       1292         32          0         24        676       2910   board.o
      16612        104          0          1          0      39951   glcd.o
-      3960        298          0        444          0      34359   graphic.o
+      3960        298          0        444          0      34363   graphic.o
        220         24          0          0          0      27444   irq_button.o
        508         52          0         20          0        769   irq_rit.o
        284         46          0          0          0      17598   irq_timer.o
@@ -916,12 +916,12 @@ Image component sizes
        132         10          0          0          0        416   lib_joystick.o
        148         14          0          0          0      27411   lib_rit.o
        168          4          0          0          0       1352   lib_timer.o
-        88         14          0         12          0       5126   sample.o
+       104         18          0         12          0       5130   sample.o
         56         22        204          0        512        916   startup_lpc17xx.o
        588         36          0          5          0        813   system_lpc17xx.o
 
     ----------------------------------------------------------------------
-     24292        682       1790        512       1192     160818   Object Totals
+     24308        686       1790        512       1192     160826   Object Totals
          0          0         64          0          0          0   (incl. Generated)
          0          0          2          6          4          0   (incl. Padding)
 
@@ -982,15 +982,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     25410        726       1790        512       1288     160774   Grand Totals
-     25410        726       1790        104       1288     160774   ELF Image Totals (compressed)
-     25410        726       1790        104          0          0   ROM Totals
+     25426        730       1790        512       1288     160782   Grand Totals
+     25426        730       1790        104       1288     160782   ELF Image Totals (compressed)
+     25426        730       1790        104          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                27200 (  26.56kB)
+    Total RO  Size (Code + RO Data)                27216 (  26.58kB)
     Total RW  Size (RW Data + ZI Data)              1800 (   1.76kB)
-    Total ROM Size (Code + RO Data + RW Data)      27304 (  26.66kB)
+    Total ROM Size (Code + RO Data + RW Data)      27320 (  26.68kB)
 
 ==============================================================================
 
