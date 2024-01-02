@@ -22,107 +22,32 @@ Dialog DLL:      TARMP1.DLL V1.26.0.0
  
 <h2>Project:</h2>
 Z:\Quoridor\sample.uvprojx
-Project File Date:  12/29/2023
+Project File Date:  01/02/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Target 1'
 assembling startup_LPC17xx.s...
-compiling graphic.c...
-game\graphic.c(252): error:  #116: a break statement may only be used within a loop or switch
-  			break;
-game\graphic.c(253): error:  #121: a case label may only be used within a switch
-  			case 3:
-game\graphic.c(295): error:  #169: expected a declaration
-  			break;
-game\graphic.c(298): error:  #77-D: this declaration has no storage class or type specifier
-  			jump = 0;
-game\graphic.c(298): error:  #148: variable "jump"  has already been initialized
-  			jump = 0;
-game\graphic.c(301): warning:  #77-D: this declaration has no storage class or type specifier
-  			draw_player(x, y, player);
-game\graphic.c(301): error:  #92: identifier-list parameters may only be used in a function definition
-  			draw_player(x, y, player);
-game\graphic.c(301): error:  #147: declaration is incompatible with "void draw_player(uint16_t, uint16_t, unsigned int)"  (declared at line 97)
-  			draw_player(x, y, player);
-game\graphic.c(305): error:  #169: expected a declaration
-  			if(game_status == 1 || game_status == 2){
-game\graphic.c(351): warning:  #12-D: parsing restarts here after previous syntax error
-  	return;
-game\graphic.c(352): error:  #169: expected a declaration
-  }
-game\graphic.c(429): warning:  #12-D: parsing restarts here after previous syntax error
-  				break;
-game\graphic.c(430): error:  #169: expected a declaration
-  			case 2:
-game\graphic.c(432): error:  #169: expected a declaration
-  				if(permitted == 1){
-game\graphic.c(437): warning:  #12-D: parsing restarts here after previous syntax error
-  				break;
-game\graphic.c(438): error:  #169: expected a declaration
-  			case 3:
-game\graphic.c(440): error:  #169: expected a declaration
-  				if(permitted == 1){
-game\graphic.c(444): warning:  #12-D: parsing restarts here after previous syntax error
-  				break;
-game\graphic.c(445): error:  #169: expected a declaration
-  		}
-game\graphic.c(448): error:  #77-D: this declaration has no storage class or type specifier
-  		barrier_position.y = y;
-game\graphic.c(448): error:  #147: declaration is incompatible with "CoordinatePosition barrier_position"  (declared at line 69)
-  		barrier_position.y = y;
-game\graphic.c(448): error:  #65: expected a ";"
-  		barrier_position.y = y;
-game\graphic.c(449): warning:  #77-D: this declaration has no storage class or type specifier
-  		draw_barrier(x, y, angle_barrier, color_barrier);
-game\graphic.c(449): error:  #92: identifier-list parameters may only be used in a function definition
-  		draw_barrier(x, y, angle_barrier, color_barrier);
-game\graphic.c(450): error:  #169: expected a declaration
-  }
-game\graphic.c(474): warning:  #12-D: parsing restarts here after previous syntax error
-  		barrier_direction = 0;
-game\graphic.c(476): error:  #77-D: this declaration has no storage class or type specifier
-  		barrier_coordinate.x = barrier_coordinate.x - 1;
-game\graphic.c(476): error:  #147: declaration is incompatible with "CoordinatePosition barrier_coordinate"  (declared at line 60)
-  		barrier_coordinate.x = barrier_coordinate.x - 1;
-game\graphic.c(476): error:  #65: expected a ";"
-  		barrier_coordinate.x = barrier_coordinate.x - 1;
-game\graphic.c(477): error:  #77-D: this declaration has no storage class or type specifier
-  		barrier_coordinate.y = barrier_coordinate.y - 1;
-game\graphic.c(477): error:  #147: declaration is incompatible with "CoordinatePosition barrier_coordinate"  (declared at line 476)
-  		barrier_coordinate.y = barrier_coordinate.y - 1;
-game\graphic.c(477): error:  #65: expected a ";"
-  		barrier_coordinate.y = barrier_coordinate.y - 1;
-game\graphic.c(479): error:  #169: expected a declaration
-  	}else{
-game\graphic.c(500): warning:  #12-D: parsing restarts here after previous syntax error
-  		barrier_coordinate.x = barrier_coordinate.x + 1;
-game\graphic.c(501): error:  #77-D: this declaration has no storage class or type specifier
-  		barrier_coordinate.y = barrier_coordinate.y + 1;
-game\graphic.c(501): error:  #147: declaration is incompatible with "CoordinatePosition barrier_coordinate"  (declared at line 477)
-  		barrier_coordinate.y = barrier_coordinate.y + 1;
-game\graphic.c(501): error:  #65: expected a ";"
-  		barrier_coordinate.y = barrier_coordinate.y + 1;
-game\graphic.c(503): error:  #169: expected a declaration
-  	}
-game\graphic.c: 8 warnings, 30 errors
 compiling core_cm3.c...
-compiling lib_timer.c...
 compiling system_LPC17xx.c...
-compiling IRQ_timer.c...
+compiling lib_timer.c...
 compiling sample.c...
+compiling IRQ_timer.c...
+compiling graphic.c...
 compiling AsciiLib.c...
 compiling board.c...
-compiling TouchPanel.c...
 compiling IRQ_RIT.c...
-compiling HzLib.c...
 compiling lib_RIT.c...
-compiling lib_button.c...
 compiling IRQ_button.c...
+compiling HzLib.c...
+compiling lib_button.c...
 compiling lib_joystick.c...
-compiling funct_joystick.c...
 compiling GLCD.c...
-".\sample.axf" - 30 Error(s), 8 Warning(s).
+compiling funct_joystick.c...
+compiling TouchPanel.c...
+linking...
+Program Size: Code=25410 RO-data=1790 RW-data=512 ZI-data=1288  
+".\sample.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -145,8 +70,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.5.0
-Target not created.
-Build Time Elapsed:  00:00:06
+Build Time Elapsed:  00:01:06
 </pre>
 </body>
 </html>

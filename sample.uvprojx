@@ -496,21 +496,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>TP</GroupName>
-          <Files>
-            <File>
-              <FileName>TouchPanel.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\TouchPanel\TouchPanel.c</FilePath>
-            </File>
-            <File>
-              <FileName>TouchPanel.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\TouchPanel\TouchPanel.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>RIT</GroupName>
           <Files>
             <File>
@@ -567,6 +552,21 @@
               <FileName>funct_joystick.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\joystick\funct_joystick.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>TP</GroupName>
+          <Files>
+            <File>
+              <FileName>TouchPanel.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TouchPanel\TouchPanel.c</FilePath>
+            </File>
+            <File>
+              <FileName>TouchPanel.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\TouchPanel\TouchPanel.h</FilePath>
             </File>
           </Files>
         </Group>

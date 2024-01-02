@@ -54,7 +54,7 @@ int main(void)
 	enable_RIT();													/* RIT enabled												*/
 	init_timer(1, 0x017D7840);											// 1s 
   
-	TP_Init();
+	//TP_Init();
 	//TouchPanel_Calibrate();
 
   LCD_Initialization();

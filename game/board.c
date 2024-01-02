@@ -185,9 +185,6 @@ int movePlayer(unsigned int player, unsigned int direction){
 		player2[0][0] = x;
 		player2[0][1] = y;
 	}
-	if(limited_move(jump) == 1){
-		return 0;
-	}
 	return checkWinner();
 }
 
