@@ -51,11 +51,8 @@ int main(void)
 	BUTTON_init();												/* BUTTON Initialization              */
 	joystick_init();											/* Joystick Initialization            */
 	init_RIT(0x004C4B40);									/* RIT Initialization 50 msec       	*/
-	enable_RIT();													/* RIT enabled												*/
+	enable_RIT();
 	init_timer(1, 0x017D7840);											// 1s 
-  
-	//TP_Init();
-	//TouchPanel_Calibrate();
 
   LCD_Initialization();
 	init_game();

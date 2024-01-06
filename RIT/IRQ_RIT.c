@@ -20,6 +20,7 @@ extern CoordinatePosition player_position2;
 extern CoordinatePosition barrier_position;
 extern CoordinatePosition barrier_coordinate;
 extern unsigned int barrier_direction;
+extern int last_player_direction;
 /******************************************************************************
 ** Function name:		RIT_IRQHandler
 **
@@ -51,9 +52,10 @@ void RIT_IRQHandler (void)
 		select ++;
 		switch(select){
 			case 1:
+				if(barrier == 0) confirm_player_movement(last_player_direction);
+				if(barrier == 1) confirm_barrier();
 				if(player == 1) player = 2;
 				else if(player == 2) player = 1;
-				if(barrier == 1)confirm_barrier();
 				break;
 			default:
 				break;
@@ -68,7 +70,7 @@ void RIT_IRQHandler (void)
 			down ++;
 		switch(down){
 			case 1:
-				if(barrier == 0)	move_player(x, y, player, 2);
+				if(barrier == 0)	show_movement(x, y, 2);
 				else move_barrier(barrier_position.x, barrier_position.y, barrier_direction, 0);
 				break;
 			default:
@@ -84,7 +86,7 @@ void RIT_IRQHandler (void)
 			left ++;
 			switch(left){
 				case 1:
-					if(barrier == 0) move_player(x, y, player, 3);
+					if(barrier == 0) show_movement(x, y, 3);
 				  else move_barrier(barrier_position.x, barrier_position.y, barrier_direction, 3);
 					break;
 				default:
@@ -101,7 +103,7 @@ void RIT_IRQHandler (void)
 			right ++;
 		switch(right){
 			case 1:
-				if(barrier == 0) move_player(x, y, player, 1);
+				if(barrier == 0) show_movement(x, y, 1);
 				else move_barrier(barrier_position.x, barrier_position.y, barrier_direction, 2);
 				break;
 			default:
@@ -118,7 +120,7 @@ void RIT_IRQHandler (void)
 		up ++;
 		switch(up){
 			case 1:
-				if(barrier == 0) move_player(x, y, player, 0);
+				if(barrier == 0) show_movement(x, y, 0);
 				else move_barrier(barrier_position.x, barrier_position.y, barrier_direction, 1);
 				break;
 			default:

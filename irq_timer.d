@@ -13,3 +13,5 @@
 .\irq_timer.o: timer\../game/board.h
 .\irq_timer.o: timer\../game/graphic.h
 .\irq_timer.o: timer\../game/../GLCD/GLCD.h
+.\irq_timer.o: timer\../game/move.h
+.\irq_timer.o: timer\../RIT/RIT.h

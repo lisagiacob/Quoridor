@@ -3,14 +3,13 @@
 */
 
 #include "board.h"
-#include "graphic.h"
+#include "move.h"
 
 unsigned int board[13][13] = {{0}};
-unsigned int player1[1][2] = {{0,6}};
-unsigned int player2[1][2] = {{12,6}};
+volatile unsigned int player1[1][2] = {{0,6}};
+volatile unsigned int player2[1][2] = {{12,6}};
 unsigned int wallsPlayer1 = 8;
 unsigned int wallsPlayer2 = 8;
-extern int jump;
 
 void initGame(void){
 	board[0][6] = 1;
@@ -24,7 +23,7 @@ int checkWinner(void){
 		if(board[0][i] == 2){
 			//player2 wins
 			return 2;
-		}else if (board[i][12] == 1){
+		}else if (board[12][i] == 1){
 			//player1 wins
 			return 1;
 		}
@@ -40,7 +39,7 @@ int checkWinner(void){
 *     2 -> if player 2 won
 *     -1 -> if none wins
 */
-int movePlayer(unsigned int player, unsigned int direction){
+int movePlayer(unsigned int player, unsigned int direction, unsigned int confirmMove){
 	unsigned int x,y;
 	int wallChecker;
 	int oldX, oldY;
@@ -170,20 +169,24 @@ int movePlayer(unsigned int player, unsigned int direction){
 			break;
 	}
 	
-	if(player == 1){
+	if(player == 1 && confirmMove){
 		oldX = player1[0][0];
 		oldY = player1[0][1];
 		board[oldX][oldY] = 0;
 		board[x][y] = 1;
 		player1[0][0] = x;
 		player1[0][1] = y;
-	}else if(player == 2){
+		player = 0;
+		saveMove(player, 0, 0, x, y);
+	}else if(player == 2 && confirmMove){
 		oldX = player2[0][0];
 		oldY = player2[0][1];
 		board[oldX][oldY] = 0;
 		board[x][y] = 2;
 		player2[0][0] = x;
 		player2[0][1] = y;
+		player = 1;
+		saveMove(player, 0, 0, x, y);
 	}
 	return checkWinner();
 }
@@ -198,6 +201,7 @@ int movePlayer(unsigned int player, unsigned int direction){
 */
 int createWall(unsigned int player, int x, int y, int alpha, int confirm_wall){
 	int x1, x2, y1, y2;
+	int xCentre, yCentre;
 	
 	if(player == 1 && wallsPlayer1 == 0){
 			return 2;
@@ -215,6 +219,8 @@ int createWall(unsigned int player, int x, int y, int alpha, int confirm_wall){
 					board[x][y] = 3;
 					board[x][y1] = 3;
 					board[x][y2] = 3;
+					xCentre = x;
+					yCentre = y1;
 				}
 			}else{
 				//occupied
@@ -229,6 +235,8 @@ int createWall(unsigned int player, int x, int y, int alpha, int confirm_wall){
 					board[x][y] = 3;
 					board[x1][y] = 3;
 					board[x2][y] = 3;
+					xCentre = x1;
+					yCentre = y1;
 				}
 			}else{
 				//occupied
@@ -241,11 +249,16 @@ int createWall(unsigned int player, int x, int y, int alpha, int confirm_wall){
 		if(confirm_wall){
 			if(player == 1){
 				wallsPlayer1--;
+				player = 0;
 			}else if(player == 2){
 				wallsPlayer2--;
+				player = 1;
 			}
 		}
 	}
+	
+	if(confirm_wall)
+		saveMove(player, 1, alpha, xCentre, yCentre);
 	return 1;
 }
 

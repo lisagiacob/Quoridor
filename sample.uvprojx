@@ -458,6 +458,16 @@
               <FileType>5</FileType>
               <FilePath>.\game\board.h</FilePath>
             </File>
+            <File>
+              <FileName>move.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\game\move.c</FilePath>
+            </File>
+            <File>
+              <FileName>move.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\game\move.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
